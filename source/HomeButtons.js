@@ -24,7 +24,7 @@ class HomeButtons extends React.Component {
 		        <View style={styles.container} >
 
 		          <SquareButton
-		            backgroundContainer={{backgroundColor: '#c76c8e'}}
+		            backgroundContainer={{backgroundColor: '#C76C8E'}}
 		            text={'BLOG'}
 		            img={require('./img_01.png')}
 		            navDestination={'BlogScreen'}
@@ -47,13 +47,14 @@ class HomeButtons extends React.Component {
 		        <View style={styles.container} >
 
 		          <SquareButton 
-		            backgroundContainer={{backgroundColor: '#de5930'}}
+		            backgroundContainer={{backgroundColor: '#DE5930'}}
 		            text={'PROGRAMAÇÃO'}
 		            img={require('./img_04.png')}
 		          />
+
 		          
 		          <SquareButton 
-		            backgroundContainer={{backgroundColor: '#86bc01'}}
+		            backgroundContainer={{backgroundColor: '#86BC01'}}
 		            text={'MINHA AGENDA'}
 		            img={require('./img_05.png')}
 		          />
@@ -103,12 +104,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f6f6f6',
+    backgroundColor: '#F6F6F6',		 //change to f6f6f6
     marginTop: 3,
     marginLeft: 5,
     marginRight: 5,
-    height: '17%',
     width: '100%',
+    aspectRatio: 3,
   },
 })
 
