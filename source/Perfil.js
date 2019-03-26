@@ -56,9 +56,17 @@ class Perfil extends React.Component {
 					data={data.Items}
 					renderItem={({item}) => {
 						console.log(item);
+						let dataStream = {
+							blogHead: item.Tittle,
+							blogImg: require('./blog_img_1.png'),
+							blogTextBody: item.ShortDescription,
+						}
 						return (
-							<View style={{flex: 1, backgroundColor: 'orange'}}>
-								<Text style={styles.textStyle}> {item.Tittle} </Text>
+							<View style={{flex: 1, backgroundColor: 'lightgrey'}}>
+								<PostBlog 
+									postContainer={styles.postContainer}
+									postContent={dataStream}
+								/>
 							</View>
 						)
 					}}
@@ -78,8 +86,19 @@ const styles = StyleSheet.create({
 	},
 
 	textStyle: {
-		color: 'white',
-		backgroundColor: 'transparent',
+		color: 'black',
+		backgroundColor: '#F6F6F6',
+	},
+	postContainer: {
+		flex:1,
+		backgroundColor: '#F6F6F6',			// change to f6f6f6
+		width: '100%',
+		aspectRatio: 0.9,
+		//height: 300,
+		alignItems: 'center',
+		marginBottom: '1%',
+		//borderWidth: 3,					//test border
+		//borderColor: 'crimson',			//test border color
 	},
 })
 

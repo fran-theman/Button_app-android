@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
 	titleStyle: {
 		flex: 0,
 		color: '#a53284',
-		fontSize: 28,
+		fontSize: 26,
 		fontWeight: 'bold',
-		marginTop: '5%',
+		marginTop: '2%',
 		marginBottom: '2%',
 		//backgroundColor: 'dodgerblue',				//test color
 	},
