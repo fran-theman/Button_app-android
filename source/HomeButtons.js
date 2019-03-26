@@ -95,7 +95,7 @@ class HomeButtons extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#f6f6f6',
+    backgroundColor: '#F6F6F6',
     justifyContent: 'center',
     alignItems: 'center',
   },

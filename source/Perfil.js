@@ -4,48 +4,82 @@ import {
 	Text,
 	Image,
 	StyleSheet,
+	ScrollView,
+	FlatList,
 } from 'react-native';
 import StackNavigator from 'react-navigation';
+import PostBlog from './PostBlog';
 
 class Perfil extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			data: null,
+		};
+	}
+
+	componentDidMount() {
+		fetch('https://dpvymqg5lb.execute-api.sa-east-1.amazonaws.com/prod/news')
+			.then(response => response.json())
+			.then(data => {
+				this.setState({data: data})
+				console.log('Loading')
+			});
+	}
+
 	static navigationOptions = {
 		title: 'PERFIL',
-		headerTintColor: '#f6f6f6',
+		headerTintColor: '#F6F6F6',
 		headerStyle: {
-			backgroundColor: '#a53284'
+			backgroundColor: '#A53284'
 		},
 	};
 
 	render () {
+		let { data } = this.state;
+
+		//indicates when loading is done
+		if (data === null) {
+			return (
+				<View style={{ backgroundColor: 'red', flex: 1}}>
+				</View>)
+		}
+
+
+		console.log(data.Items);
+
+		//Flat List 
 		return (
-			<View style={styles.mainContainer}>
-				<Image 
-					source={require('./Screen_1_perfil.png')}
-					style={{
-						width: '120%',
-						height: '100%',
-						top: -50,
-						right: -25,
+			<View style={{ flex: 1, backgroundColor: 'blue'}}>
+				<FlatList
+					data={data.Items}
+					renderItem={({item}) => {
+						console.log(item);
+						return (
+							<View style={{flex: 1, backgroundColor: 'orange'}}>
+								<Text style={styles.textStyle}> {item.Tittle} </Text>
+							</View>
+						)
 					}}
 				/>
 			</View>
-		);
+
+			)
 	}
 }
 
 const styles = StyleSheet.create({
 	mainContainer: {
 		flex: 1,
-		backgroundColor: '#f6f6f6',
-		justifyContent: 'flex-end',
+		backgroundColor: '#F6F6F6',
+		justifyContent: 'center',
 		alignItems: 'center',
 	},
 
 	textStyle: {
 		color: 'white',
-		backgroundColor: 'seagreen', //What?
-		width: '40%',
-		height: '15%',
+		backgroundColor: 'transparent',
 	},
 })
 
