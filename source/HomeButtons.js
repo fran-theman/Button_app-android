@@ -41,6 +41,7 @@ class HomeButtons extends React.Component {
 		            backgroundContainer={{backgroundColor: '#1CAADD'}}
 		            text={'INFORMAÇÕES'}
 		            img={require('./img_03v1.png')}
+		            navDestination={'InfoScreen'}
 		          />
 		        </View>
 	      
@@ -50,6 +51,7 @@ class HomeButtons extends React.Component {
 		            backgroundContainer={{backgroundColor: '#DE5930'}}
 		            text={'PROGRAMAÇÃO'}
 		            img={require('./img_04.png')}
+		            navDestination={'CalendarScreen'}
 		          />
 
 		          
@@ -57,12 +59,14 @@ class HomeButtons extends React.Component {
 		            backgroundContainer={{backgroundColor: '#86BC01'}}
 		            text={'MINHA AGENDA'}
 		            img={require('./img_05.png')}
+		            navDestination={'AgendaScreen'}
 		          />
 		        
 		          <SquareButton 
 		            backgroundContainer={{backgroundColor: '#1CB5AC'}}
 		            text={'CONTATOS'}
 		            img={require('./img_06.png')}
+		            navDestination={'ContactsScreen'}
 		          />
 		        </View>
 
@@ -72,12 +76,14 @@ class HomeButtons extends React.Component {
 		            backgroundContainer={{backgroundColor: '#C434C4'}}
 		            text={'MURAL'}
 		            img={require('./img_07.png')}
+		            navDestination={'WallScreen'}
 		          />
 
 		          <SquareButton 
 		            backgroundContainer={{backgroundColor: '#64BB22'}}
 		            text={'AVALIAR EVENTOS'}
 		            img={require('./img_08.png')}
+		            navDestination={'ScoreScreen'}
 		          />
 
 		          <SquareButton 
@@ -85,6 +91,7 @@ class HomeButtons extends React.Component {
 		            backgroundContainer={{backgroundColor: '#138C84'}}
 		            text={'PATROCINADORES'}
 		            img={require('./img_09.png')}
+		            navDestination={'PatronScreen'}
 		          />
 		        </View>
 		    </View>
